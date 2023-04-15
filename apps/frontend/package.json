@@ -1,0 +1,28 @@
+{
+  "name": "remix-wizard-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && echo \"Build finished.\"",
+    "serve": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Keisuke Takagi <mit@takagi.app> (https://takagimeow.hatenablog.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^5.0.2",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "tsconfig": "*",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
+  }
+}
