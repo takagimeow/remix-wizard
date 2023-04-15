@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "tsc && vite build && echo \"Build finished.\"",
     "serve": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:css": "tailwindcss -i ./src/styles/global.css -o ./src/styles/tailwind.css"
   },
   "keywords": [],
   "author": "Keisuke Takagi <mit@takagi.app> (https://takagimeow.hatenablog.com/)",
