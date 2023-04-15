@@ -1,11 +1,9 @@
 {
   "name": "remix-wizard-frontend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && echo \"Build finished.\"",
     "serve": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
