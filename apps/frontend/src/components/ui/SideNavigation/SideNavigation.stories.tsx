@@ -6,9 +6,8 @@ import { languages, templates } from "../../../utils/constants";
 const meta = {
   title: 'ui/SideNavigation',
   component: SideNavigation,
-  // tags: ['autodocs'],
+  tags: ['autodocs'],
   argTypes: {
-    // onChange: { action: 'onChange' }
     onClick: { action: 'onClick' }
   },
 } satisfies Meta<typeof SideNavigation>;
@@ -29,8 +28,5 @@ export const CurrentPath: Story = {
       title: "Language",
       path: "/language"
     }],
-    // primary: true,
-    // label: 'SideNavigation',
-    // onChange: (value) => { return value }
   }
 }
