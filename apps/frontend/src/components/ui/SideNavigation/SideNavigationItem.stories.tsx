@@ -27,7 +27,7 @@ export const CurrentPath: Story = {
 export const NotCurrentPath: Story = {
   args: {
     title: "Select Template",
-    description: "Code",
+    description: "Express",
     path: "/select-template",
     isCurrent: false,
   }
