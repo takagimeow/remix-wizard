@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { SideNavigation } from "./SideNavigation";
-import { languages, templates } from "../../../utils/constants";
 
 const meta = {
   title: 'ui/SideNavigation',
