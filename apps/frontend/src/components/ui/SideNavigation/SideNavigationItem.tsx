@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./SideNavigationItem.module.css";
 
 export interface SideNavigationItemProps {
@@ -12,13 +13,13 @@ export function SideNavigationItem({ path, title, description, isCurrent = false
   return (
     <div className={styles.container}>
       <div className={`${styles.subcontainer} ${styles['left-subcontainer']}`}>
-        <p className={`${styles.indicator} ${isCurrent ? null : styles['link-indicator']}`}>{isCurrent ? "◯" : "●"}</p>
+        <div className={`${styles.indicator} ${isCurrent ? null : styles['link-indicator']}`}><span>{isCurrent ? "◯" : "●"}</span></div>
         {!isCurrent && <div className={`${styles.vl}`} />}
       </div>
-      <div className={styles.subcontainer}>
-        <button className={`${styles.button} ${styles.title} ${isCurrent ? null : styles['link-title']}`} onClick={() => {
-          onClick && onClick(path);
-        }}>{title}</button>
+      <div className={`${styles.subcontainer} ${styles['right-subcontainer']}`}>
+        <div className={`${styles['title-container']}`}>
+          <NavLink to={`${path}`} className={`${styles.link} ${styles.title} ${isCurrent ? null : styles['link-title']}`}>{title}</NavLink>
+        </div>
         {<p className={`${description ? styles.subtitle : styles["invisible-subtitle"]}`}>{description}</p>}
       </div>
     </div>

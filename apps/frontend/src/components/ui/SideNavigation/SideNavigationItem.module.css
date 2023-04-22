@@ -11,6 +11,14 @@
 
 .left-subcontainer {
   align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-subcontainer {
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -34,32 +42,39 @@ p {
   border-left: 0.7px solid;
   height: 100%;
   position: relative;
-  left: 25%;
+  left: -20%;
 }
 
-button {
+.link {
+  font-size: smaller;
   background-color: transparent;
   border: none;
   padding: 0;
   margin: 0;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
 .title {
   font-weight: 800;
-  margin-bottom: 8px;
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
 
 .link-title {
   font-weight: 800;
   color: blue;
-  border-bottom: 1px solid blue;
+  text-decoration: underline;
 }
 
 .link-title:hover {
   border: none;
-  padding-bottom: 1px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .subtitle {
