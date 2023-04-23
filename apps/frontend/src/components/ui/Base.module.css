@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.container h1 {
+  font-size: 1.5rem;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 1.5rem;
+}
+
+.container .form {
+  display: flex;
+  flex-direction: column;
+}
+.container .form label {
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+.container .form label .mandatory {
+  font-size: inherit;
+  color: red;
+}
