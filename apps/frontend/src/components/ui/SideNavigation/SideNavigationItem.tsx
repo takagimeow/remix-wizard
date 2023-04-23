@@ -18,7 +18,13 @@ export function SideNavigationItem({ path, title, description, isCurrent = false
       </div>
       <div className={`${styles.subcontainer} ${styles['right-subcontainer']}`}>
         <div className={`${styles['title-container']}`}>
-          <NavLink to={`${path}`} className={`${styles.link} ${styles.title} ${isCurrent ? null : styles['link-title']}`}>{title}</NavLink>
+          {
+            isCurrent ? (
+              <a className={`${styles.link} ${styles.title}`}>{title}</a>
+            ) : (
+              <NavLink to={`${path}`} className={`${styles.link} ${styles.title} ${styles['link-title']}`}>{title}</NavLink>
+            )
+          }
         </div>
         {<p className={`${description ? styles.subtitle : styles["invisible-subtitle"]}`}>{description}</p>}
       </div>
