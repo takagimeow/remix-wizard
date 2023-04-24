@@ -17,9 +17,13 @@
 }
 .container .form label {
   margin-bottom: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 1.0rem;
 }
 .container .form label .mandatory {
   font-size: inherit;
   color: red;
+}
+
+#root {
+  height: 100%;
 }

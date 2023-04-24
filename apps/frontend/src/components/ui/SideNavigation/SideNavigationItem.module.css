@@ -24,29 +24,31 @@
 p {
   margin: 0;
   padding: 0;
-  font-size: x-small;
+  font-size: 0.8rem;
 }
 
 .indicator {
   color: inherit;
   margin: 0;
   margin-right: 8px;
+  font-size: 1.0rem;
 }
 
 .link-indicator {
   color: blue;
   margin-bottom: 8px;
+  font-size: 1.0rem;
 }
 
 .vl {
   border-left: 0.7px solid;
   height: 100%;
   position: relative;
-  left: -20%;
+  left: -16%;
 }
 
 .link {
-  font-size: smaller;
+  font-size: 1.0rem;
   background-color: transparent;
   border: none;
   padding: 0;

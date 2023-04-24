@@ -1,0 +1,35 @@
+@import "../Base.module.css";
+
+.container .form {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  font-size: smaller;
+  justify-content: flex-start;
+}
+
+.container p {
+  font-size: 1.0rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.container .form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 3rem;
+  justify-content: space-between;
+  margin-right: 1.5rem;
+}
+
+.container .form div label {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.container .form div input {
+  font-size: 1.0rem;
+  margin: 0;
+}
