@@ -41,4 +41,8 @@ The commands are also accessible via the command palette.
 
 ## Release Notes
 
+### 0.1.0
+
+Initial release of remix-wizard
+
 [MIT LICENSE](LICENSE)
