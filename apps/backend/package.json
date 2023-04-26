@@ -2,13 +2,35 @@
   "name": "remix-wizard",
   "displayName": "Remix Wizard",
   "description": "Provides rich user experience for Remix CLI.",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "keywords": [
+    "vscode",
+    "remix",
+    "cli",
+    "wizard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takagimeow/remix-wizard"
+  },
+  "preview": false,
+  "license": "MIT",
+  "author": {
+    "name": "Keisuke Takagi",
+    "email": "mit@takagi.app"
+  },
+  "publisher": "takagimeow",
   "engines": {
     "vscode": "^1.77.0"
   },
   "categories": [
     "Other"
   ],
+  "icon": "resources/extensionIcon.png",
+  "galleryBanner": {
+    "color": "#212121",
+    "theme": "light"
+  },
   "activationEvents": [
     "*"
   ],
@@ -41,9 +63,6 @@
     "build": "npm-run-all compile frontend:copy",
     "clean:frontend": "cd ./dist && shx rm -rf ./media",
     "frontend:copy": "npm-run-all clean:frontend && shx cp -r ../frontend/dist/. ./dist/media/"
-  },
-  "dependencies": {
-    "remix-wizard-frontend": "*"
   },
   "devDependencies": {
     "@types/vscode": "^1.77.0",
