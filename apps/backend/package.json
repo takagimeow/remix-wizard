@@ -9,13 +9,15 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "remix-wizard.helloWorld",
-        "title": "Hello World"
+        "command": "remix-wizard.setup",
+        "title": "Open Remix Setup Wizard"
       }
     ]
   },
@@ -28,8 +30,13 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "build": "npm-run-all compile frontend:copy",
+    "clean:frontend": "cd ./dist && shx rm -rf ./media",
+    "frontend:copy": "npm-run-all clean:frontend && shx cp -r ../frontend/dist/. ./dist/media/"
+  },
   "dependencies": {
-    "remix-wizard-fontend": "*"
+    "remix-wizard-frontend": "*"
   },
   "devDependencies": {
     "@types/vscode": "^1.77.0",
