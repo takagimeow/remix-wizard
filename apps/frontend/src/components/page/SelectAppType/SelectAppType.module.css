@@ -1,0 +1,76 @@
+@import "../../ui/Base.module.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.container h1 {
+  font-size: 1.5rem;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  margin-bottom: 1rem;
+}
+
+.mandatory {
+  color: red;
+  font-size: 1rem;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.subcontainer button {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid;
+  color: inherit;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 10.5rem;
+  height: 20rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.subcontainer button:hover {
+  cursor: pointer;
+}
+
+.subcontainer button.selected {
+  background: var(--vscode-inputOption-hoverBackground);
+  color: inherti;
+}
+
+.subcontainer button h2 {
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+.subcontainer button p {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.label {
+  margin-bottom: 4rem;
+  font-size: 1rem;
+}
