@@ -1,0 +1,19 @@
+@import "../Base.module.css";
+
+.container input[type="text"] {
+  width: 50%;
+  height: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.container .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .form input {
+  background-color: transparent;
+  border: 1px solid;
+  color: inherit;
+}
