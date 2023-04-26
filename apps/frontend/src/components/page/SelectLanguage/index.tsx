@@ -1,0 +1,1 @@
+export { SelectLanguagePage, SelectLanguageIndexPage } from "./SelectLanguage.page"
