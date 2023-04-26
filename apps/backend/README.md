@@ -33,7 +33,7 @@ The following commands are available to create a project:
 
 | Command              | Keybinding    | Description                                                             |
 | -------------------- | ------------- | ----------------------------------------------------------------------- |
-| `remix-wizard.setup` | `Cmd+Shift+C` | Set up a new project from a template through a user-friendly interface. |
+| `remix-wizard.setup` | `Cmd+Shift+S` | Set up a new project from a template through a user-friendly interface. |
 
 The commands are also accessible via the command palette.
 
