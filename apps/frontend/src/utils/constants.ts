@@ -10,6 +10,22 @@ export const appTypes: Option[] = [
     value: "stack",
   }
 ];
+
+export const stacks: Option[] = [
+  {
+    name: "Blues",
+    value: "remix-run/blues-stack",
+  },
+  {
+    name: "Indie",
+    value: "remix-run/indie-stack",
+  },
+  {
+    name: "Grunge",
+    value: "remix-run/grunge-stack",
+  },
+];
+
 export const templates: Option[] = [
   {
     name: 'Architect (AWS Lambda)',
