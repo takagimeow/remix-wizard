@@ -1,71 +1,44 @@
-# remix-wizard README
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="static/remix-wizard-dark.png">
+    <img alt="Remix WIZARD" src="static/remix-wizard-light.png" width="100%">
+  </picture>
+</p>
 
-This is the README for your extension "remix-wizard". After writing up a brief description, we recommend including the following sections.
+<div align="center">
+
+# Remix WIZARD
+
+**Spend less time looking up Remix CLI arguments and more time shipping incredible Remix apps.**
+
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/takagimeow.remix-wizard)](https://marketplace.visualstudio.com/items?itemName=takagimeow.remix-wizard)
+[![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/takagimeow.remix-wizard)](https://marketplace.visualstudio.com/items?itemName=takagimeow.remix-wizard)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/takagimeow.remix-wizard)](https://marketplace.visualstudio.com/items?itemName=takagimeow.remix-wizard)
+[![Github stars](https://img.shields.io/github/stars/takagimeow/remix-wizard)](https://github.com/takagimeow/remix-wizard)
+
+</div>
+
+<hr>
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The extension provides the following features:
 
-For example if there is an image subfolder under your extension project workspace:
+- Instead of using the CLI, you can now create Remix projects through an intuitive and user-friendly UI.
+- You can create a project from either a Template or Stacks as per your preference.
 
-\!\[feature X\]\(images/feature-x.png\)
+![Prompting selected texts](static/select-app-type.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+The following commands are available to create a project:
 
-## Requirements
+| Command              | Keybinding    | Description                                                             |
+| -------------------- | ------------- | ----------------------------------------------------------------------- |
+| `remix-wizard.setup` | `Cmd+Shift+C` | Set up a new project from a template through a user-friendly interface. |
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+The commands are also accessible via the command palette.
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+![Commands](static/command-palette.png)
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[MIT LICENSE](LICENSE)
