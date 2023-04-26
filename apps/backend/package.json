@@ -2,7 +2,7 @@
   "name": "remix-wizard",
   "displayName": "Remix Wizard",
   "description": "Provides rich user experience for Remix CLI.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "vscode",
     "remix",
