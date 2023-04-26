@@ -15,15 +15,17 @@ export function Select({ title, label, placeholder, options, onChange }: SelectP
       <h1>{title}</h1>
       <div className={styles.form}>
         <label htmlFor="name">{label}<span className={styles.mandatory}>{" "}*</span></label>
-        <select name="template" id="template" onChange={(e) => {
+        <select defaultValue={""} className={`${styles.select}`} name="template" id="template" onChange={(e) => {
           onChange && e.target.value && onChange(e.target.value)
         }}>
           {
             placeholder ? (
               <option
                 value=""
+                disabled
+                className={styles.placeholder}
               >
-                Please select a template
+                {placeholder}
               </option>
             ) : null
           }
@@ -32,7 +34,7 @@ export function Select({ title, label, placeholder, options, onChange }: SelectP
               key={option.value}
               value={option.value}
             >
-              {option.text}
+              {option.name}
             </option>
           ))}
         </select>
