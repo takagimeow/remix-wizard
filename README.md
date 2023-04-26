@@ -1,73 +1,44 @@
-# Turborepo starter
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="static/remix-wizard-dark.png">
+        <img alt="Remix WIZARD" src="static/remix-wizard-light.png" width="100%">
+    </picture>
+</p>
 
-This is an official npm starter turborepo.
+<div align="center">
 
-## What's inside?
+# Remix WIZARD
 
-This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It includes the following packages/apps:
+**Spend less time looking up Remix CLI arguments and more time shipping incredible Remix apps.**
 
-### Apps and Packages
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/takagimeow.remix-wizard)](https://marketplace.visualstudio.com/items?itemName=takagimeow.remix-wizard)
+[![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/takagimeow.remix-wizard)](https://marketplace.visualstudio.com/items?itemName=takagimeow.remix-wizard)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/takagimeow.remix-wizard)](https://marketplace.visualstudio.com/items?itemName=takagimeow.remix-wizard)
+[![Github stars](https://img.shields.io/github/stars/takagimeow/remix-wizard)](https://github.com/takagimeow/remix-wizard)
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+</div>
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+<hr>
 
-### Utilities
+## Features
 
-This turborepo has some additional tools already setup for you:
+The extension provides the following features:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- Instead of using the CLI, you can now create Remix projects through an intuitive and user-friendly UI.
+- You can create a project from either a Template or Stacks as per your preference.
 
-### Build
+![Prompting selected texts](static/select-app-type.png)
 
-To build all apps and packages, run the following command:
+The following commands are available to create a project:
 
-```
-cd my-turborepo
-npm run build
-```
+| Command              | Keybinding    | Description                                                             |
+| -------------------- | ------------- | ----------------------------------------------------------------------- |
+| `remix-wizard.setup` | `Cmd+Shift+C` | Set up a new project from a template through a user-friendly interface. |
 
-### Develop
+The commands are also accessible via the command palette.
 
-To develop all apps and packages, run the following command:
+![Commands](static/command-palette.png)
 
-```
-cd my-turborepo
-npm run dev
-```
+## Release Notes
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+[MIT LICENSE](LICENSE)
