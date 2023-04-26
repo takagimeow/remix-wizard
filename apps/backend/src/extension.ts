@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
 		let indexHtml = readFileSync(join(mediaPath, htmlFileName), "utf8");
 		const panel = vscode.window.createWebviewPanel(
 			'remix-wizard',
-			'Remix Wizard',
+			'Remix Setup Wizard',
 			vscode.ViewColumn.One,
 			{
 				enableScripts: true,
