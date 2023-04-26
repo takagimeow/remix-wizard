@@ -1,10 +1,8 @@
 @import "../Base.module.css";
 
 .button {
-  --color-primary: #3992ff;
-  --color-primary-dark: #1e6eff;
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--vscode-textLink-foreground);
+  color: inherit;
   border: none;
   border-radius: 0rem;
   padding: 0.5rem 1.5rem;
@@ -17,7 +15,7 @@
 }
 
 .button:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--vscode-selection-background);
 }
 
 .button.disabled {
