@@ -1,5 +1,15 @@
 import type { Option } from "../types";
 
+export const appTypes: Option[] = [
+  {
+    name: "Template",
+    value: "template",
+  },
+  {
+    name: "Stack",
+    value: "stack",
+  }
+];
 export const templates: Option[] = [
   {
     name: 'Architect (AWS Lambda)',
