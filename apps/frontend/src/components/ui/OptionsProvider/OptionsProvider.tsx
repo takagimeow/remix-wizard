@@ -1,17 +1,20 @@
 import React, { useCallback, useState } from "react";
 
 type HandleChangeProps = {
-  key: 'template' | 'language';
+  key: 'appType' | 'appTemplate' | 'language' | 'remixVersion' | 'dir';
   value: string;
 } | {
-  key: 'installDependencies';
+  key: 'install';
   value: boolean;
 };
 
 type RemixOptions = {
-  template?: string;
+  appType?: string;
+  appTemplate?: string;
   language?: string;
-  installDependencies?: boolean;
+  remixVersion?: string;
+  install?: boolean;
+  dir?: string;
 }
 
 const defaultOptions: RemixOptions = {}
@@ -24,31 +27,46 @@ export const OptionsContext = React.createContext<RemixOptions & {
 });
 
 export function OptionsProvider({ children }: { children: React.ReactNode }) {
-  const [template, setTemplate] = useState<string>('');
+  const [appType, setAppType] = useState<string>('');
+  const [appTemplate, setAppTemplate] = useState<string>('');
   const [language, setLanguage] = useState<string>('');
-  const [installDependencies, setInstallDependencies] = useState<boolean>(false);
+  const [remixVersion, setRemixVersion] = useState<string>('');
+  const [install, setInstall] = useState<boolean>(false);
+  const [dir, setDir] = useState<string>('');
 
   const handleChange = useCallback(({ key, value }: HandleChangeProps) => {
     switch (key) {
-      case 'template':
-        setTemplate(value);
+      case 'appType':
+        setAppType(value);
+        break;
+      case 'appTemplate':
+        setAppTemplate(value);
         break;
       case 'language':
+        if (value === "typescript" && appTemplate === "remix") {
+          setAppTemplate("remix");
+        }
         setLanguage(value);
         break;
-      case 'installDependencies':
-        setInstallDependencies(value);
+      case 'remixVersion':
+        setRemixVersion(value);
+        break;
+      case 'install':
+        setInstall(value);
+        break;
+      case 'dir':
+        setDir(value);
         break;
       default:
-        setTemplate('');
+        setAppTemplate('');
         setLanguage('');
-        setInstallDependencies(false);
+        setInstall(false);
         break;
     }
-  }, []);
+  }, [appTemplate, language]);
 
   return (
-    <OptionsContext.Provider value={{ language, template, installDependencies, handleChange }}>
+    <OptionsContext.Provider value={{ appType, appTemplate, language, remixVersion, install, dir, handleChange }}>
       {children}
     </OptionsContext.Provider>
   );
