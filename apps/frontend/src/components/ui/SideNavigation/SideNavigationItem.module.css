@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-subcontainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.indicator {
+  color: inherit;
+  margin: 0;
+  margin-right: 8px;
+  font-size: 1.0rem;
+}
+
+.link-indicator {
+  color: var(--vscode-textLink-foreground);
+  margin-bottom: 8px;
+  font-size: 1.0rem;
+}
+
+.vl {
+  border-left: 0.7px solid;
+  height: 100%;
+  position: relative;
+  left: -16%;
+}
+
+.link {
+  font-size: 1.0rem;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 800;
+  color: inherit;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: inherit;
+}
+
+.link-title {
+  font-weight: 800;
+  color: var(--vscode-textLink-foreground);
+  text-decoration: underline;
+}
+
+.link-title:hover {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--vscode-selection-background);
+}
+
+.subtitle {
+  font-weight: 300;
+  height: 40px;
+}
+
+.invisible-subtitle {
+  height: 18px;
+}

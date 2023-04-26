@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/react.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "jsx": "react-jsx"
+  },
+  "include": ["**/*.ts", "**/*.tsx", "src/components/page/InstallDeps"],
+  "exclude": ["node_modules"]
+}

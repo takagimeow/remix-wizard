@@ -1,0 +1,42 @@
+{
+  "name": "remix-wizard-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && echo \"Build finished.\"",
+    "serve": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:css": "tailwindcss -i ./src/styles/global.css -o ./src/styles/tailwind.css",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "Keisuke Takagi <mit@takagi.app> (https://takagimeow.hatenablog.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^5.0.2",
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/blocks": "^7.0.6",
+    "@storybook/react": "^7.0.6",
+    "@storybook/react-vite": "^7.0.6",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "@types/vscode-webview": "^1.57.1",
+    "@vitejs/plugin-react": "^3.1.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.6",
+    "tailwindcss": "^3.3.1",
+    "tsconfig": "*",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
+  }
+}

@@ -1,0 +1,1 @@
+export { LoadingIndexPage, LoadingPage } from "./Loading.page"
