@@ -2,50 +2,50 @@ import type { Option } from "../types";
 
 export const templates: Option[] = [
   {
-    text: 'Arc',
+    name: 'Architect (AWS Lambda)',
     value: 'arc'
   },
   {
-    text: 'Cloudflare Pages',
+    name: 'Cloudflare Pages',
     value: 'cloudflare-pages'
   },
   {
-    text: 'Cloudflare Workers',
+    name: 'Cloudflare Workers',
     value: 'cloudflare-workers'
   },
   {
-    text: 'Deno',
+    name: 'Deno',
     value: 'deno'
   },
   {
-    text: 'Express',
+    name: 'Express Server',
     value: 'express'
   },
   {
-    text: 'Fly',
+    name: 'Fly.io',
     value: 'fly'
   },
   {
-    text: 'Netlify',
+    name: 'Netlify',
     value: 'netlify'
   },
   {
-    text: 'Remix',
+    name: 'Remix App Server',
     value: 'remix'
   },
   {
-    text: 'Vercel',
+    name: 'Vercel',
     value: 'vercel'
   }
 ]
 
 export const languages: Option[] = [
   {
-    text: 'JavaScript',
+    name: 'JavaScript',
     value: 'javascript'
   },
   {
-    text: 'TypeScript',
+    name: 'TypeScript',
     value: 'typescript'
   }
 ]
