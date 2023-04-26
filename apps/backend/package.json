@@ -36,7 +36,7 @@
     "frontend:copy": "npm-run-all clean:frontend && shx cp -r ../frontend/dist/. ./dist/media/"
   },
   "dependencies": {
-    "remix-wizard-fontend": "*"
+    "remix-wizard-frontend": "*"
   },
   "devDependencies": {
     "@types/vscode": "^1.77.0",
