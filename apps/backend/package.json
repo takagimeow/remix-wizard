@@ -19,6 +19,13 @@
         "command": "remix-wizard.setup",
         "title": "Open Remix Setup Wizard"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "remix-wizard.setup",
+        "key": "ctrl+shift+s",
+        "mac": "cmd+shift+s"
+      }
     ]
   },
   "scripts": {
