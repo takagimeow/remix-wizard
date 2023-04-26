@@ -30,6 +30,11 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "build": "npm-run-all compile frontend:copy",
+    "clean:frontend": "cd ./dist && shx rm -rf ./media",
+    "frontend:copy": "npm-run-all clean:frontend && shx cp -r ../frontend/dist/. ./dist/media/"
+  },
   "dependencies": {
     "remix-wizard-fontend": "*"
   },
