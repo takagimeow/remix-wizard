@@ -1,101 +1,118 @@
 import * as React from "react";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import type { WebviewApi } from "vscode-webview";
+import { Link, createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
+import { SelectTemplateIndexPage, SelectTemplatePage } from "./components/page/SelectTemplate";
+import { Root } from "./components/page/Root/Root";
+import { OptionsProvider } from "./components/ui/OptionsProvider/OptionsProvider";
+import { SelectLanguageIndexPage, SelectLanguagePage } from "./components/page/SelectLanguage";
+import { InstallDepsIndexPage, InstallDepsPage } from "./components/page/InstallDeps";
+import { SelectAppTypeIndexPage, SelectAppTypePage } from "./components/page/SelectAppType/SelectAppType.page";
+import { DirectoryNameInputIndexPage, DirectoryNameInputPage } from "./components/page/DirectoryNameInput/DirectoryNameInput.page";
+import { appTemplateSegment, appTypeSegment, dirSegment, installSegment, languageSegment, remixVersionSegment } from "./components/page/Root/routes";
+import { SelectRemixVersionIndexPage, SelectRemixVersionPage } from "./components/page/SelectRemixVersion/SelectRemixVersion.page";
+import { VSCodeProvider } from "./components/ui/VSCodeProvider/VSCodeProvider";
+import { LoadingIndexPage, LoadingPage } from "./components/page/Loading/Loading.page";
 
-const vscode = acquireVsCodeApi();
+let router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Root,
+    children: [
+      {
+        path: "/index.html",
+        index: true,
+        Component: Home,
+      },
+      {
+        path: "loading",
+        Component: LoadingPage,
+        children: [
+          {
+            index: true,
+            Component: LoadingIndexPage,
+          }
+        ]
+      },
+      {
+        path: appTypeSegment.replace("/", ""),
+        Component: SelectAppTypePage,
+        children: [
+          {
+            index: true,
+            Component: SelectAppTypeIndexPage,
+          },
+          {
+            path: appTemplateSegment.replace("/", ""),
+            Component: SelectTemplatePage,
+            children: [
+              {
+                index: true,
+                Component: SelectTemplateIndexPage,
+              },
+              {
+                path: languageSegment.replace("/", ""),
+                Component: SelectLanguagePage,
+                children: [
+                  {
+                    index: true,
+                    Component: SelectLanguageIndexPage,
+                  },
+                  {
+                    path: remixVersionSegment.replace("/", ""),
+                    Component: SelectRemixVersionPage,
+                    children: [
+                      {
+                        index: true,
+                        Component: SelectRemixVersionIndexPage,
+                      },
+                      {
+                        path: installSegment.replace("/", ""),
+                        Component: InstallDepsPage,
+                        children: [
+                          {
+                            index: true,
+                            Component: InstallDepsIndexPage,
+                          },
+                          {
+                            path: dirSegment.replace("/", ""),
+                            Component: DirectoryNameInputPage,
+                            children: [
+                              {
+                                index: true,
+                                Component: DirectoryNameInputIndexPage,
+                              },
+                            ],
+                          }
+                        ]
+                      }
+                    ],
+                  }
+                ]
+              }
+            ]
+          },
+        ]
+      },
+      {
+        path: "*",
+        Component: NoMatch
+      }
+    ]
+  }
+]);
 
 export default function App() {
-
   return (
-    <div>
-      <h1>Basic Example</h1>
-
-      <p>
-        This example demonstrates some of the core features of React Router
-        including nested <code>&lt;Route&gt;</code>s,{" "}
-        <code>&lt;Outlet&gt;</code>s, <code>&lt;Link&gt;</code>s, and using a
-        "*" route (aka "splat route") to render a "not found" page when someone
-        visits an unrecognized URL.
-      </p>
-
-      {/* Routes nest inside one another. Nested route paths build upon
-            parent route paths, and nested route elements render inside
-            parent route elements. See the note about <Outlet> below. */}
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
-
-          {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
-          <Route path="*" element={<NoMatch />} />
-        </Route>
-      </Routes>
-    </div>
-  );
-}
-
-function Layout() {
-  return (
-    <div>
-      {/* A "layout route" is a good place to put markup you want to
-          share across all the pages on your site, like navigation. */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <hr />
-
-      {/* An <Outlet> renders whatever child route is currently active,
-          so you can think about this <Outlet> as a placeholder for
-          the child routes we defined above. */}
-      <Outlet />
-    </div>
+    <OptionsProvider>
+      <VSCodeProvider>
+        <RouterProvider router={router} fallbackElement={<Fallback />} />
+      </VSCodeProvider>
+    </OptionsProvider>
   );
 }
 
 function Home() {
-  React.useEffect(() => {
-    vscode?.postMessage({
-      command: 'alert',
-      text: 'Hello from React!'
-    });
-  }, []);
   return (
-    <div>
-      <h2 className="text-5xl font-bold">Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
+    <Navigate to={appTypeSegment} replace={true} />
   );
 }
 
@@ -108,4 +125,8 @@ function NoMatch() {
       </p>
     </div>
   );
+}
+
+export function Fallback() {
+  return <p>Performing initial data load</p>;
 }
