@@ -1,13 +1,15 @@
 import type { Option } from "../types";
 
-export const appTypes: Option[] = [
+export const appTypes: (Option & { description: string })[] = [
   {
     name: "Template",
     value: "template",
+    description: "Just the basics",
   },
   {
     name: "Stack",
     value: "stack",
+    description: "A pre-configured stack ready for production",
   }
 ];
 
