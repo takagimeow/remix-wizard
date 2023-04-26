@@ -9,13 +9,15 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "remix-wizard.helloWorld",
-        "title": "Hello World"
+        "command": "remix-wizard.setup",
+        "title": "Open Remix Setup Wizard"
       }
     ]
   },
