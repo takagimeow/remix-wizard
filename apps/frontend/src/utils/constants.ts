@@ -1,51 +1,77 @@
 import type { Option } from "../types";
 
+export const appTypes: Option[] = [
+  {
+    name: "Template",
+    value: "template",
+  },
+  {
+    name: "Stack",
+    value: "stack",
+  }
+];
+
+export const stacks: Option[] = [
+  {
+    name: "Blues",
+    value: "remix-run/blues-stack",
+  },
+  {
+    name: "Indie",
+    value: "remix-run/indie-stack",
+  },
+  {
+    name: "Grunge",
+    value: "remix-run/grunge-stack",
+  },
+];
+
 export const templates: Option[] = [
   {
-    text: 'Arc',
+    name: 'Architect (AWS Lambda)',
     value: 'arc'
   },
   {
-    text: 'Cloudflare Pages',
+    name: 'Cloudflare Pages',
     value: 'cloudflare-pages'
   },
   {
-    text: 'Cloudflare Workers',
+    name: 'Cloudflare Workers',
     value: 'cloudflare-workers'
   },
   {
-    text: 'Deno',
+    name: 'Deno',
     value: 'deno'
   },
   {
-    text: 'Express',
+    name: 'Express Server',
     value: 'express'
   },
   {
-    text: 'Fly',
+    name: 'Fly.io',
     value: 'fly'
   },
   {
-    text: 'Netlify',
+    name: 'Netlify',
     value: 'netlify'
   },
   {
-    text: 'Remix',
+    name: 'Remix App Server',
     value: 'remix'
   },
   {
-    text: 'Vercel',
+    name: 'Vercel',
     value: 'vercel'
   }
 ]
 
 export const languages: Option[] = [
   {
-    text: 'JavaScript',
+    name: 'JavaScript',
     value: 'javascript'
   },
   {
-    text: 'TypeScript',
+    name: 'TypeScript',
     value: 'typescript'
   }
 ]
