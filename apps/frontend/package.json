@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "tsc && vite build && echo \"Build finished.\"",
     "serve": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "generate:css": "tailwindcss -i ./src/styles/global.css -o ./src/styles/tailwind.css",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
