@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import rollupReplace from "@rollup/plugin-replace";
@@ -12,5 +13,10 @@ export default defineConfig({
       }
     }),
     react(),
-  ]
+  ],
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: ["./tests/setup.js"],
+  }
 });
