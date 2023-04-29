@@ -3,6 +3,17 @@ import userEvent from '@testing-library/user-event'
 import { Button } from './Button';
 import { vitest } from 'vitest';
 
+test("should render button with text", async () => {
+  // ARRANGE
+  render(<Button text="Click" />)
+
+  // ACT
+  const button = screen.getByText('Click')
+
+  // ASSERT
+  expect(button).toBeInTheDocument()
+});
+
 test('should onClick be called when button is clicked', async () => {
   const mockOnClick = vitest.fn();
   // ARRANGE
@@ -14,3 +25,14 @@ test('should onClick be called when button is clicked', async () => {
   // ASSERT
   expect(mockOnClick).toHaveBeenCalled()
 })
+
+test('should be disabled when disabled is true', async () => {
+  // ARRANGE
+  render(<Button text="Click" disabled={true} />)
+
+  // ACT
+  const button = screen.getByText('Click')
+
+  // ASSERT
+  expect(button).toBeDisabled()
+});
