@@ -16,3 +16,14 @@ test("should render radio with text", async () => {
   // ASSERT
   expect(radio).toBeInTheDocument()
 });
+
+test("should render radio with label", async () => {
+  // ARRANGE
+  render(<Radio title={title} label={label} />)
+
+  // ACT
+  const radio = screen.getByText(label)
+
+  // ASSERT
+  expect(radio).toBeInTheDocument()
+});
